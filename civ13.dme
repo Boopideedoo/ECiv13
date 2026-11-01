@@ -1177,6 +1177,7 @@
 #include "code\processes\python.dm"
 #include "code\processes\scheduler.dm"
 #include "code\processes\self_cleaning.dm"
+#include "code\processes\tgs.dm"
 #include "code\processes\throwing.dm"
 #include "code\processes\ticker.dm"
 #include "code\processes\time_of_day.dm"
@@ -1189,4 +1190,5 @@
 #include "interface\interface.dm"
 #include "interface\skin.dmf"
 #include "maps\nomads\nomads_gaia.dmm"
+#include "tgs\includes.dm"
 // END_INCLUDE

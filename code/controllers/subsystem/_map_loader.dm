@@ -13,6 +13,8 @@
     var/datum/map_info/next_map = null
 
 /datum/controller/subsystem/map_loader/Initialize()
+    SSmap_loader = src
+    log_world("MAP LOADER: Initialize called; SSmap_loader assigned.")
     load_map_config()
     load_selected_map()
     return ..()
