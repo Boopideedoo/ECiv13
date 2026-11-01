@@ -199,7 +199,7 @@ var/mob/living/human/next_gas_flesh_message = -1
 /datum/reagent/toxin/zyklon_b
 	name = "Zyklon B"
 	id = "zyklon_b"
-	description = "A gas used for delousing. Would require unrealistically high concentrations to harm a human."
+	description = "A gas used for delousing. Would require unrelistically high concentrations to harm a human."
 	reagent_state = GAS
 	color = "#00a0b0"
 	strength = FALSE

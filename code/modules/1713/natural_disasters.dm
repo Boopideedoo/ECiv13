@@ -158,11 +158,11 @@
 	return
 
 /obj/map_metadata/proc/volcano_eruption()
-	var/list/lavalist = list()
+	var/list/lavlist = list()
 	for(var/turf/wall/rockwall/lavaspawner/L in world)
-		lavalist += L
-	if (!isemptylist(lavalist))
-		var/turf/wall/rockwall/lavaspawner/T = pick(lavalist)
+		lavlist += L
+	if (!isemptylist(lavlist))
+		var/turf/wall/rockwall/lavaspawner/T = pick(lavlist)
 		T.start_lava_flow()
 		world << "<font color='red'><big><b>The volcano erupts, with lava flowing down the mountain!</b></big></font>"
 		return TRUE

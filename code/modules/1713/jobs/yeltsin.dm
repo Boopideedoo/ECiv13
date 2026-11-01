@@ -219,7 +219,7 @@
 	H.equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/submachinegun/ak74/aks74/aks74u/aks74uso(H), slot_shoulder)
 	H.equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/pistol/makarov(H), slot_l_hand)
 	H.equip_to_slot_or_del(new /obj/item/weapon/storage/belt/smallpouches/green/sov_swat(H), slot_belt)
-	H.equip_to_slot_or_del(new /obj/item/weapon/shield/balistic(H), slot_back)
+	H.equip_to_slot_or_del(new /obj/item/weapon/shield/blistic(H), slot_back)
 	
 	H.civilization = "Russian Army"
 	give_random_name(H)

@@ -28,8 +28,8 @@
 	research_active = TRUE
 	nomads = TRUE
 	gamemode = "Classic (Stone Age Start)"
-	var/list/arealist_r = list()
-	var/list/arealist_g = list()
+	var/list/arelist_r = list()
+	var/list/arelist_g = list()
 /obj/map_metadata/nomads_riverside/New()
 	..()
 	spawn(18000)

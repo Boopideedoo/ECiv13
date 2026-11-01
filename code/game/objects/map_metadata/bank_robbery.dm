@@ -321,8 +321,8 @@ var/message_spam_check_6 = FALSE
 					new /obj/item/ammo_magazine/shellbox(T)
 				new /obj/item/ammo_magazine/shellbox/beanbag(T)
 				new /obj/item/ammo_magazine/shellbox/rubber(T)
-				new /obj/item/weapon/shield/balistic(T)
-				new /obj/item/weapon/shield/balistic(T)
+				new /obj/item/weapon/shield/blistic(T)
+				new /obj/item/weapon/shield/blistic(T)
 		next_level_police = 1
 		return
 	if (civilians_evacuated >= civilians_alive && civilians_alive != 0 && next_level_police == 1)

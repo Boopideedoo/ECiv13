@@ -26,8 +26,8 @@
 	research_active = TRUE
 	nomads = TRUE
 	gamemode = "Classic (Stone Age Start)"
-	var/list/arealist_r = list()
-	var/list/arealist_g = list()
+	var/list/arelist_r = list()
+	var/list/arelist_g = list()
 
 	var/eruptions_enabled = TRUE
 

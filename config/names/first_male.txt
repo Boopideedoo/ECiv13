@@ -72,7 +72,7 @@ Aristotles
 Armando
 Arnie
 Arridaios
-Arsène
+Arsï¿½ne
 Art
 Artemidoros
 Arthur
@@ -230,8 +230,8 @@ Cy
 Cyberniskos
 Cynaegiros
 Cyniscus
-Côme
-Cöon
+Cï¿½me
+Cï¿½on
 Daan
 Dakota
 Dallas
@@ -243,7 +243,7 @@ Damon
 Dane
 Dani
 Daniel
-Daniël
+Daniï¿½l
 Danny
 Dante
 Daphnis
@@ -399,7 +399,7 @@ Gunner
 Gustavo
 Guus
 Hadrien
-Halisthertes
+Hlisthertes
 Han
 Harrison
 Harry
@@ -641,7 +641,7 @@ Mateo
 Mathew
 Mathias
 Mathieu
-Mathéo
+Mathï¿½o
 Mats
 Matthew
 Matthijs
@@ -731,7 +731,7 @@ Oswald
 Otreus
 Owen
 Pablo
-Paeëon
+Paeï¿½on
 Paget
 Paios
 Parker
@@ -921,7 +921,7 @@ Timagoras
 Timasitheus
 Timo
 Timothy
-Timéo
+Timï¿½o
 Titus
 Tobias
 Todd

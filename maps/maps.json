@@ -1,0 +1,167 @@
+{
+  "maps": [
+    {
+      "name": "Nomads Africa",
+      "id": "nomads_africa",
+      "path": "maps/nomads_africa.dmm",
+      "voteable": true
+    },
+    {
+      "name": "Nomads Asia",
+      "id": "nomads_asia",
+      "path": "maps/nomads_asia.dmm",
+      "voteable": true
+    },
+    {
+      "name": "Nomads Continental",
+      "id": "nomads_continental",
+      "path": "maps/nomads_continental.dmm",
+      "voteable": true
+    },
+    {
+      "name": "Nomads Desert",
+      "id": "nomads_desert",
+      "path": "maps/nomads_desert.dmm",
+      "voteable": true
+    },
+    {
+      "name": "Nomads Divide",
+      "id": "nomads_divide",
+      "path": "maps/nomads_divide.dmm",
+      "voteable": true
+    },
+    {
+      "name": "Nomads Europe",
+      "id": "nomads_europe",
+      "path": "maps/nomads_europe.dmm",
+      "voteable": true
+    },
+    {
+      "name": "Nomads Extended",
+      "id": "nomads_extended",
+      "path": "maps/nomads_extended.dmm",
+      "voteable": true
+    },
+    {
+      "name": "Nomads Frozen Wasteland",
+      "id": "nomads_frozen_wasteland",
+      "path": "maps/nomads_frozen_wasteland.dmm",
+      "voteable": true
+    },
+    {
+      "name": "Nomads Gaia",
+      "id": "nomads_gaia",
+      "path": "maps/nomads_gaia.dmm",
+      "voteable": true
+    },
+    {
+      "name": "Nomads Ice Age",
+      "id": "nomads_ice_age",
+      "path": "maps/nomads_ice_age.dmm",
+      "voteable": true
+    },
+    {
+      "name": "Nomads Island",
+      "id": "nomads_island",
+      "path": "maps/nomads_island.dmm",
+      "voteable": true
+    },
+    {
+      "name": "Nomads Jungle",
+      "id": "nomads_jungle",
+      "path": "maps/nomads_jungle.dmm",
+      "voteable": true
+    },
+    {
+      "name": "Nomads Karafuto",
+      "id": "nomads_karafuto",
+      "path": "maps/nomads_karafuto.dmm",
+      "voteable": true
+    },
+    {
+      "name": "Nomads Mediterranean",
+      "id": "nomads_mediterranean",
+      "path": "maps/nomads_mediterranean.dmm",
+      "voteable": true
+    },
+    {
+      "name": "Nomads Mountain",
+      "id": "nomads_mountain",
+      "path": "maps/nomads_mountain.dmm",
+      "voteable": true
+    },
+    {
+      "name": "Nomads New World",
+      "id": "nomads_new_world",
+      "path": "maps/nomads_new_world.dmm",
+      "voteable": true
+    },
+    {
+      "name": "Nomads North America",
+      "id": "nomads_north_america",
+      "path": "maps/nomads_north_america.dmm",
+      "voteable": true
+    },
+    {
+      "name": "Nomads Oceania",
+      "id": "nomads_oceania",
+      "path": "maps/nomads_oceania.dmm",
+      "voteable": true
+    },
+    {
+      "name": "Nomads Pangea",
+      "id": "nomads_pangea",
+      "path": "maps/nomads_pangea.dmm",
+      "voteable": true
+    },
+    {
+      "name": "Nomads Persistence Beta",
+      "id": "nomads_persistence_beta",
+      "path": "maps/nomads_persistence_beta.dmm",
+      "voteable": false
+    },
+    {
+      "name": "Nomads Riverside",
+      "id": "nomads_riverside",
+      "path": "maps/nomads_riverside.dmm",
+      "voteable": true
+    },
+    {
+      "name": "Nomads Stranded",
+      "id": "nomads_stranded",
+      "path": "maps/nomads_stranded.dmm",
+      "voteable": true
+    },
+    {
+      "name": "Nomads Testing",
+      "id": "nomads_testing",
+      "path": "maps/nomads_testing.dmm",
+      "voteable": false
+    },
+    {
+      "name": "Nomads Theia",
+      "id": "nomads_theia",
+      "path": "maps/nomads_theia.dmm",
+      "voteable": true
+    },
+    {
+      "name": "Nomads UK",
+      "id": "nomads_uk",
+      "path": "maps/nomads_uk.dmm",
+      "voteable": true
+    },
+    {
+      "name": "Nomads Wasteland 2",
+      "id": "nomads_wasteland_2",
+      "path": "maps/nomads_wasteland_2.dmm",
+      "voteable": true
+    },
+    {
+      "name": "Nomads Wasteland",
+      "id": "nomads_wasteland",
+      "path": "maps/nomads_wasteland.dmm",
+      "voteable": true
+    }
+  ],
+  "default_map": "nomads_pangea"
+}

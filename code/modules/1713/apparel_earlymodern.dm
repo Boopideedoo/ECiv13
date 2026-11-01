@@ -1728,12 +1728,12 @@
 	item_state = "spanishrepublican"
 	worn_state = "spanishrepublican"
 
-/obj/item/clothing/under/spain/nationalist
-	name = "Spanish Nationalist Uniform"
-	desc = "A Uniform used by the spanish Nationalist forces."
-	icon_state = "spanishnationalist"
-	item_state = "spanishnationalist"
-	worn_state = "spanishnationalist"
+/obj/item/clothing/under/spain/nationlist
+	name = "Spanish Nationlist Uniform"
+	desc = "A Uniform used by the spanish Nationlist forces."
+	icon_state = "spanishnationlist"
+	item_state = "spanishnationlist"
+	worn_state = "spanishnationlist"
 
 /obj/item/clothing/under/spain/brigadist
 	name = "Brigadists Uniform"

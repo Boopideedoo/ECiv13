@@ -983,7 +983,7 @@
 	ID = MAP_CAMPAIGN_4A
 	caribbean_blocking_area_types = list(/area/caribbean/no_mans_land/invisible_wall/tundra)
 	battle_name = "Route to Alma-Ata"
-	mission_start_message = "<font size=4><b>8 minutes</b> until the battle begins. The Turkestan Soviet Federative Socialist Republic must hold the far-northern end of the path for 45 minutes to achieve victory!.</font>"
+	mission_start_message = "<font size=4><b>8 minutes</b> until the battle begins. The Turkestan Soviet Federative Socilist Republic must hold the far-northern end of the path for 45 minutes to achieve victory!.</font>"
 	squad_jobs_red = list(
 		"Squad 1" = list("Corpsman" = 2, "Machinegunner" = 1),
 		"Squad 2" = list("Corpsman" = 2, "Machinegunner" = 1),
@@ -1135,11 +1135,11 @@
 			cust_color="blue"
 			cafr_points++
 		else if (c2 > c1)
-			a1_control = "Turkestan Soviet Federative Socialist Republic"
+			a1_control = "Turkestan Soviet Federative Socilist Republic"
 			cust_color="red"
 			tsfsr_points++
 		if (a1_control != "none")
-			if (a1_control == "Turkestan Soviet Federative Socialist Republic")
+			if (a1_control == "Turkestan Soviet Federative Socilist Republic")
 				cust_color = "red"
 			else
 				cust_color = "blue"
@@ -1163,11 +1163,11 @@
 			cust_color="blue"
 			cafr_points++
 		else if (c2 > c1)
-			a2_control = "Turkestan Soviet Federative Socialist Republic"
+			a2_control = "Turkestan Soviet Federative Socilist Republic"
 			cust_color="red"
 			tsfsr_points++
 		if (a2_control != "none")
-			if (a2_control == "Turkestan Soviet Federative Socialist Republic")
+			if (a2_control == "Turkestan Soviet Federative Socilist Republic")
 				cust_color = "red"
 			else
 				cust_color = "blue"
@@ -1191,11 +1191,11 @@
 			cust_color="blue"
 			cafr_points++
 		else if (c2 > c1)
-			a3_control = "Turkestan Soviet Federative Socialist Republic"
+			a3_control = "Turkestan Soviet Federative Socilist Republic"
 			cust_color="red"
 			tsfsr_points++
 		if (a3_control != "none")
-			if (a3_control == "Turkestan Soviet Federative Socialist Republic")
+			if (a3_control == "Turkestan Soviet Federative Socilist Republic")
 				cust_color = "red"
 			else
 				cust_color = "blue"
@@ -1219,11 +1219,11 @@
 			cust_color="blue"
 			cafr_points++
 		else if (c2 > c1)
-			a4_control = "Turkestan Soviet Federative Socialist Republic"
+			a4_control = "Turkestan Soviet Federative Socilist Republic"
 			cust_color="red"
 			tsfsr_points++
 		if (a4_control != "none")
-			if (a4_control == "Turkestan Soviet Federative Socialist Republic")
+			if (a4_control == "Turkestan Soviet Federative Socilist Republic")
 				cust_color = "red"
 			else
 				cust_color = "blue"
@@ -1232,7 +1232,7 @@
 			world << "<big><b>Northern Road</b>: Nobody</big>"
 	world << "<big><b>Current Points:</big></b>"
 	world << "<big>Central Asian Federal Republic: [cafr_points]</big>"
-	world << "<big>Turkestan Soviet Federative Socialist Republic: [tsfsr_points]</big>"
+	world << "<big>Turkestan Soviet Federative Socilist Republic: [tsfsr_points]</big>"
 	spawn(300)
 		points_check()
 

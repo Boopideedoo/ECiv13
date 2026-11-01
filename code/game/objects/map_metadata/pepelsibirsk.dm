@@ -254,7 +254,7 @@ var/global/datum/external_relations/external_relations = new()
 /obj/map_metadata/pepelsibirsk/proc/check_relations_msg()
 	to_chat(world, "<font size = 4><span class = 'notice'><b>Diplomatic Relations:</b></font></span>")
 	to_chat(world, "<br><font size = 3><span class = 'notice'>People's Republic of China: <b>[CHINA_RELATIONS]</b></span></font>")
-	to_chat(world, "<br><font size = 3><span class = 'notice'>Union of Soviet Socialist Republics: <b>[SOVIET_RELATIONS]</b></span></font>")
+	to_chat(world, "<br><font size = 3><span class = 'notice'>Union of Soviet Socilist Republics: <b>[SOVIET_RELATIONS]</b></span></font>")
 	to_chat(world, "<br><font size = 3><span class = 'notice'>United States of the Pacific: <b>[PACIFIC_RELATIONS]</b></span></font>")
 	to_chat(world, "<br><font size = 3><span class = 'notice'>Naroddnygorod: <b>[CIV_RELATIONS]</b></span></font>")
 	to_chat(world, "<br><font size = 3><span class = 'notice'>Pepelsibirsk-1: <b>[MIL_RELATIONS]</b></span></font>")
@@ -542,7 +542,7 @@ var/global/datum/external_relations/external_relations = new()
 			new product_key(get_turf(src))
 	new /mob/living/human/corpse(get_turf(src))
 	SOVIET_RELATIONS -= rand(10, 25)
-	to_chat(world, "<font size = 3><span class = 'notice'><b>A Soviet trader has died. Relations with the Union of Soviet Socialist Republics have dropped to [MIL_RELATIONS]!</b></font></span>")
+	to_chat(world, "<font size = 3><span class = 'notice'><b>A Soviet trader has died. Relations with the Union of Soviet Socilist Republics have dropped to [MIL_RELATIONS]!</b></font></span>")
 
 ////// TRAVELING MERCHANTS MANAGEMENT //////
 /obj/map_metadata/pepelsibirsk/proc/send_traders() //Picks a turf from trader_spawnpoint and sends traders there if relations are high enough.
@@ -634,7 +634,7 @@ var/global/datum/external_relations/external_relations = new()
 						if ("Ukrainian")
 							job = "Internal migrant from the Ukrainian SSR, working [pick("for the KGB", "for the city Soviet", "in the Pepelsibirsk mine", "in the Pepelsibirsk car factory", "at the collective farm in Pepelsibirsk", "in the Pepelsibirsk power plant", "at the collective farm in Pepelsibirsk", "in the Pepelsibirsk mine", "in the Pepelsibirsk research facility", "in the Pepelsibirsk hospital", "for the Soviet Armed Forces", "for the local Militsiya")]."
 						if ("Polish")
-							job = "Citizen of the Polish Socialist Republic, expatriated and working in [pick("the Pepelsibirsk mine","the Pepelsibirsk car factory", "the collective farm in Pepelsibirsk", "the Pepelsibirsk power plant")]."
+							job = "Citizen of the Polish Socilist Republic, expatriated and working in [pick("the Pepelsibirsk mine","the Pepelsibirsk car factory", "the collective farm in Pepelsibirsk", "the Pepelsibirsk power plant")]."
 						if ("Russian")
 							job = "Pepelsibirsk local, working [pick("for the KGB", "for the city Soviet", "in the Pepelsibirsk mine", "in the Pepelsibirsk car factory", "at the collective farm in Pepelsibirsk", "in the Pepelsibirsk power plant", "at the collective farm in Pepelsibirsk", "in the Pepelsibirsk mine", "in the Pepelsibirsk research facility", "in the Pepelsibirsk hospital", "for the Soviet Armed Forces", "for the local Militsiya")]."
 					document_details = list(H.h_style, H.gender, H.age, job)

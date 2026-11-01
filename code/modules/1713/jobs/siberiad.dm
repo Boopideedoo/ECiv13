@@ -144,7 +144,7 @@
 	return TRUE
 
 /datum/job/american/siberiad/spec
-	title = "Coalition Weapons Specialist"
+	title = "Coalition Weapons Specilist"
 	rank_abbreviation = "Spc."
 	spawn_location = "JoinLateFAR"
 
@@ -491,7 +491,7 @@
 	return TRUE
 
 /datum/job/russian/siberiad/heavy
-	title = "Soviet Army Heavy Weapons Specialist"
+	title = "Soviet Army Heavy Weapons Specilist"
 	rank_abbreviation = "Efr."
 	spawn_location = "JoinLateRU"
 

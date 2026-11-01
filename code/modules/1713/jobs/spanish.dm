@@ -419,11 +419,11 @@
 
 	return TRUE
 
-//nationalist spain civil war
+//nationlist spain civil war
 
 /datum/job/spanish/cnat/capt
-	title = "Capitán nacionalista"
-	en_meaning = "Nationalist Captain"
+	title = "Capitán nacionlista"
+	en_meaning = "Nationlist Captain"
 	rank_abbreviation = "Cap."
 
 
@@ -441,7 +441,7 @@
 //shoes
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/whiteputtee(H), slot_shoes)
 //clothes
-	H.equip_to_slot_or_del(new /obj/item/clothing/under/spain/nationalist(H), slot_w_uniform)
+	H.equip_to_slot_or_del(new /obj/item/clothing/under/spain/nationlist(H), slot_w_uniform)
 //head
 	H.equip_to_slot_or_del(new /obj/item/clothing/head/ww2/german_fieldcap(H), slot_head)
 //weapons
@@ -457,7 +457,7 @@
 	var/obj/item/clothing/accessory/armband/spanish/white = new /obj/item/clothing/accessory/armband/spanish(null)
 	uniform.attackby(white, H)
 	give_random_name(H)
-	world << "<b><big>[H.real_name] is the General of the Nationalist Forces!</big></b>"
+	world << "<b><big>[H.real_name] is the General of the Nationlist Forces!</big></b>"
 	H.add_note("Role", "You are a <b>[title]</b>, the highest ranking officer present. Your job is to command the company.")
 	H.setStat("strength", STAT_MEDIUM_HIGH)
 	H.setStat("crafting", STAT_NORMAL)
@@ -472,8 +472,8 @@
 	return TRUE
 
 /datum/job/spanish/cnat/serg
-	title = "Sargento Nacionalista"
-	en_meaning = "Nationalist Squad Leader"
+	title = "Sargento Nacionlista"
+	en_meaning = "Nationlist Squad Leader"
 	rank_abbreviation = "Sar."
 
 	spawn_location = "JoinLateFSP"
@@ -492,7 +492,7 @@
 //shoes
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/heavyboots/wrappedboots(H), slot_shoes)
 //clothes
-	H.equip_to_slot_or_del(new /obj/item/clothing/under/spain/nationalist(H), slot_w_uniform)
+	H.equip_to_slot_or_del(new /obj/item/clothing/under/spain/nationlist(H), slot_w_uniform)
 //head
 	H.equip_to_slot_or_del(new /obj/item/clothing/head/ww2/german_fieldcap(H), slot_head)
 //radio
@@ -526,8 +526,8 @@
 	return TRUE
 
 /datum/job/spanish/cnat/med
-	title = "Médico de combate nacionalista"
-	en_meaning = "Nationalist Combat medic"
+	title = "Médico de combate nacionlista"
+	en_meaning = "Nationlist Combat medic"
 	rank_abbreviation = "M."
 
 	spawn_location = "JoinLateFSP"
@@ -543,7 +543,7 @@
 //shoes
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/heavyboots/wrappedboots(H), slot_shoes)
 //clothes
-	H.equip_to_slot_or_del(new /obj/item/clothing/under/spain/nationalist(H), slot_w_uniform)
+	H.equip_to_slot_or_del(new /obj/item/clothing/under/spain/nationlist(H), slot_w_uniform)
 //head
 	H.equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/pistol/mauser(H), slot_l_hand)
 	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/mauser(H), slot_r_store)
@@ -572,8 +572,8 @@
 	return TRUE
 
 /datum/job/spanish/cnat/rifle
-	title = "Soldado nacionalista"
-	en_meaning = "Nationalist Soldier"
+	title = "Soldado nacionlista"
+	en_meaning = "Nationlist Soldier"
 	rank_abbreviation = ""
 
 	spawn_location = "JoinLateFSP"
@@ -589,7 +589,7 @@
 //shoes
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/heavyboots/wrappedboots(H), slot_shoes)
 //clothes
-	H.equip_to_slot_or_del(new /obj/item/clothing/under/spain/nationalist(H), slot_w_uniform)
+	H.equip_to_slot_or_del(new /obj/item/clothing/under/spain/nationlist(H), slot_w_uniform)
 //head
 	if (prob(40))
 		H.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/ww/adrianm26(H), slot_head)
@@ -625,7 +625,7 @@
 	var/obj/item/clothing/accessory/armband/spanish/white = new /obj/item/clothing/accessory/armband/spanish(null)
 	uniform.attackby(white, H)
 	give_random_name(H)
-	H.add_note("Role", "You are a <b>[title]</b>, a soldier of the Nationalist army. Follow your <b>Sergeant's</b> orders!")
+	H.add_note("Role", "You are a <b>[title]</b>, a soldier of the Nationlist army. Follow your <b>Sergeant's</b> orders!")
 	H.setStat("strength", STAT_MEDIUM_HIGH)
 	H.setStat("crafting", STAT_MEDIUM_LOW)
 	H.setStat("rifle", STAT_NORMAL)
@@ -656,7 +656,7 @@
 //shoes
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/heavyboots/wrappedboots(H), slot_shoes)
 //clothes
-	H.equip_to_slot_or_del(new /obj/item/clothing/under/spain/nationalist(H), slot_w_uniform)
+	H.equip_to_slot_or_del(new /obj/item/clothing/under/spain/nationlist(H), slot_w_uniform)
 //head
 	if (prob(80))
 		H.equip_to_slot_or_del(new /obj/item/clothing/head/ww2/german_tanker(H), slot_head)
@@ -674,7 +674,7 @@
 	var/obj/item/clothing/accessory/armband/spanish/white = new /obj/item/clothing/accessory/armband/spanish(null)
 	uniform.attackby(white, H)
 	give_random_name(H)
-	H.add_note("Role", "You are a <b>[title]</b>, a tanker of the Nationalist army. Follow your <b>Sergeant's</b> orders!")
+	H.add_note("Role", "You are a <b>[title]</b>, a tanker of the Nationlist army. Follow your <b>Sergeant's</b> orders!")
 	H.setStat("strength", STAT_MEDIUM_HIGH)
 	H.setStat("crafting", STAT_MEDIUM_LOW)
 	H.setStat("rifle", STAT_MEDIUM_LOW)

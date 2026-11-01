@@ -11,15 +11,15 @@
 
 	if (name != GetVoice())
 		alt_name = get_visible_name()
-	var/animalistic = FALSE
+	var/animlistic = FALSE
 	if ((werewolf || gorillaman) && body_build.name != "Default")
 		if (werewolf)
 			message = pick("grrrr!","woof", "wooof!", "rrrrr!")
-			animalistic = TRUE
+			animlistic = TRUE
 		else if (gorillaman)
 			if (map && map.ID != MAP_TRIBES && map.ID != MAP_THREE_TRIBES && map.ID != MAP_FOUR_KINGDOMS && map.ID != MAP_NOMADS_NEW_WORLD && !map.is_fantrace)
 				message = pick("uh uh uh!","UH UH", "OOGA", "BOOGA")
-				animalistic = TRUE
+				animlistic = TRUE
 	message = capitalize(sanitize(message))
 
 	for (var/i in dictionary_list)
@@ -42,15 +42,15 @@
 		if (dd_hasprefix(normal_message_without_html, rp))
 			normal_message_without_html = copytext(normal_message_without_html, length(rp)+1, length(normal_message_without_html)+1)
 	if (wolfman && howling)
-		..(normal_message, alt_name = alt_name, alt_message = normal_message_without_html, animal = animalistic, howl = TRUE, original_message = message_without_html)
+		..(normal_message, alt_name = alt_name, alt_message = normal_message_without_html, animal = animlistic, howl = TRUE, original_message = message_without_html)
 	else
-		..(normal_message, alt_name = alt_name, alt_message = normal_message_without_html, animal = animalistic, howl = FALSE, original_message = message_without_html)
+		..(normal_message, alt_name = alt_name, alt_message = normal_message_without_html, animal = animlistic, howl = FALSE, original_message = message_without_html)
 
 	for (var/mob/living/simple_animal/complex_animal/dog/D in view(7, src))
 		D.hear_command(message_without_html, src)
 
 	message_without_html = handle_speech_problems(message_without_html)[1]
-	if (!animalistic)
+	if (!animlistic)
 		for (var/obj/structure/radio/RD in range(2,src))
 			if (RD.transmitter && RD.transmitter_on && (RD.check_power() || RD.powerneeded == 0))
 				RD.broadcast(message_without_html, src, verb)

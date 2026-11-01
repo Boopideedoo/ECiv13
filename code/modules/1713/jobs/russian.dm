@@ -1344,7 +1344,7 @@
 			var/obj/item/clothing/accessory/storage/webbing/ww1/leather/ww2/mosinalt/webbing = new /obj/item/clothing/accessory/storage/webbing/ww1/leather/ww2/mosinalt(null)
 			uniform.attackby(webbing, H)
 	give_random_name(H)
-	H.add_note("Role", "You are a <b>[title]</b>, as a anti tank specialist, you are equipped with the greatest anti tank weapons the soviet union can give you, set up ambushes and destroy enemy tanks! follow your <b>Sergeant's</b> orders!")
+	H.add_note("Role", "You are a <b>[title]</b>, as a anti tank specilist, you are equipped with the greatest anti tank weapons the soviet union can give you, set up ambushes and destroy enemy tanks! follow your <b>Sergeant's</b> orders!")
 	H.add_note("AT", "-Your PTRD rifle can only penetrate light armor or broken armor, use your AT grenades to immobilize a enemy tank then break their door with your charge and throw in a grenade to clear it out!")
 	H.setStat("strength", STAT_MEDIUM_HIGH)
 	H.setStat("crafting", STAT_NORMAL)
@@ -1820,7 +1820,7 @@
 	uniform.attackby(armband, H)
 	var/obj/item/clothing/accessory/holster/hip/double/holsterh = new /obj/item/clothing/accessory/holster/hip/double(null)
 	uniform.attackby(holsterh, H)
-	H.add_note("Role", "You are a <b>[title]</b>, leading a squad of red army soldiers. Organize your troops and defeat the Capitalists!")
+	H.add_note("Role", "You are a <b>[title]</b>, leading a squad of red army soldiers. Organize your troops and defeat the Capitlists!")
 	H.setStat("strength", STAT_MEDIUM_HIGH)
 	H.setStat("crafting", STAT_MEDIUM_LOW)
 	H.setStat("rifle", STAT_HIGH)
@@ -2740,9 +2740,9 @@
 
 	return TRUE
 
-/datum/job/russian/emplaced_weapon_specialist
-	title = "Spetsialist po razmeshchennomu oruzhiyu"
-	en_meaning = "Emplaced Weapons Specialist"
+/datum/job/russian/emplaced_weapon_specilist
+	title = "Spetsilist po razmeshchennomu oruzhiyu"
+	en_meaning = "Emplaced Weapons Specilist"
 	rank_abbreviation = "Ryad."
 	spawn_location = "JoinLateRU"
 
@@ -2751,7 +2751,7 @@
 	min_positions = 1
 	max_positions = 6
 
-/datum/job/russian/emplaced_weapon_specialist/equip(var/mob/living/human/H)
+/datum/job/russian/emplaced_weapon_specilist/equip(var/mob/living/human/H)
 	if (!H)	return FALSE
 //shoes
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/jackboots/modern(H), slot_shoes)
@@ -2790,9 +2790,9 @@
 
 	return TRUE
 
-/datum/job/russian/weapon_specialist
-	title = "Spetsialist po oruzhiyu"
-	en_meaning = "Weapons Specialist"
+/datum/job/russian/weapon_specilist
+	title = "Spetsilist po oruzhiyu"
+	en_meaning = "Weapons Specilist"
 	rank_abbreviation = "Efr."
 	spawn_location = "JoinLateRU"
 
@@ -2801,7 +2801,7 @@
 	min_positions = 1
 	max_positions = 10
 
-/datum/job/russian/weapon_specialist/equip(var/mob/living/human/H)
+/datum/job/russian/weapon_specilist/equip(var/mob/living/human/H)
 	if (!H)	return FALSE
 //shoes
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/jackboots/modern(H), slot_shoes)
@@ -2827,7 +2827,7 @@
 	var/obj/item/weapon/attachment/scope/adjustable/sniper_scope/pso1/SP = new/obj/item/weapon/attachment/scope/adjustable/sniper_scope/pso1(src)
 	SP.attached(null,HGUN,TRUE)
 
-	H.equip_to_slot_or_del(new /obj/item/gunbox/specialist(H), slot_l_hand)
+	H.equip_to_slot_or_del(new /obj/item/gunbox/specilist(H), slot_l_hand)
 	H.equip_to_slot_or_del(new /obj/item/weapon/storage/belt/smallpouches/green/ak74m_smoke(H), slot_belt)
 
 	if (time_of_day == "Night" || time_of_day == "Evening" || time_of_day == "Early Morning")

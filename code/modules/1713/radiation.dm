@@ -121,7 +121,7 @@
 /mob/living/human/proc/getarmor_rad(organ)
 	return getarmor_organ(get_organ(organ), "rad")
 
-/obj/item/weapon/geiger_counter //DISCLAIMER: I know nothing about how real-life Geiger counters work. This will not be realistic. ~Xhuis
+/obj/item/weapon/geiger_counter //DISCLAIMER: I know nothing about how real-life Geiger counters work. This will not be relistic. ~Xhuis
 	name = "geiger counter"
 	desc = "A device used to detect radiation."
 	w_class = ITEM_SIZE_SMALL

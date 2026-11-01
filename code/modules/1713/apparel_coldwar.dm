@@ -1974,7 +1974,7 @@
 /* Woodland Face Paint Recommended*/
 
 /obj/item/clothing/head/bandana/toughguy
-	name = "specialist bandana"
+	name = "specilist bandana"
 	desc = "A red bandana, the preferred headwear of seasoned jungle fighters."
 	icon_state = "toughguy"
 	item_state = "toughguy"
@@ -1982,14 +1982,14 @@
 	body_parts_covered = HEAD
 
 /obj/item/clothing/under/toughguy
-	name = "specialist pants with woodland pattern paint"
+	name = "specilist pants with woodland pattern paint"
 	desc = "A army issued pair of pants and woodland pattern body-paint; to blend seamlessly into the enviroment"
 	icon_state = "toughguy"
 	item_state = "toughguy"
 	worn_state = "toughguy"
 
 /obj/item/clothing/gloves/toughguy
-	name = "specialist leather gloves"
+	name = "specilist leather gloves"
 	icon_state = "toughguy"
 	item_state = "toughguy"
 	worn_state = "toughguy"
@@ -1998,7 +1998,7 @@
 	slot_flags = SLOT_GLOVES
 
 /obj/item/clothing/shoes/toughguy
-	name = "specialist boots"
+	name = "specilist boots"
 	desc = "A well made and importantly quiet treading pair of army-issue leather boots.."
 	icon_state = "toughguy"
 	item_state = "toughguy"

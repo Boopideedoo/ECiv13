@@ -277,7 +277,7 @@
 	item_state = "jap_jotohei"
 	worn_state = "jap_jotohei"
 	name = "Jotohei rank patch"
-	desc = "the rank of senior soldier (lance corporal or specialist), to be sewn into the collar of a uniform."
+	desc = "the rank of senior soldier (lance corporal or specilist), to be sewn into the collar of a uniform."
 
 /obj/item/clothing/accessory/rank/jap_jotohei/update_icon()
 	if (map && (map.ID == MAP_NANKOU || MAP_NANJING))
@@ -580,7 +580,7 @@
 /obj/item/clothing/accessory/medal/pin/nazi
 	icon_state = "nazi_party_pin"
 	worn_state = "nazi_party_pin"
-	name = "National-socialist Party Pin"
+	name = "National-socilist Party Pin"
 	desc = "A political pin signifying that the wearer supports the beliefs of National-Socialism."
 
 
@@ -590,10 +590,10 @@
 	name = "Minarchist Party Pin"
 	desc = "A political pin signifying that the wearer supports the beliefs of Minarchism."
 
-/obj/item/clothing/accessory/medal/pin/anarchocapitalist
+/obj/item/clothing/accessory/medal/pin/anarchocapitlist
 	icon_state = "ancap_party_pin"
 	worn_state = "ancap_party_pin"
-	name = "Anarcho-capitalist Party Pin"
+	name = "Anarcho-capitlist Party Pin"
 	desc = "A political pin signifying that the wearer supports the beliefs of Anarcho-capitalism."
 
 /obj/item/clothing/accessory/medal/pin/libertarian
@@ -626,10 +626,10 @@
 	name = "Anarcho-primitist Party Pin"
 	desc = "A political pin signifying that the wearer supports the beliefs of Anarcho-primitism."
 
-/obj/item/clothing/accessory/medal/pin/environmentalist
-	icon_state = "environmentalist_party_pin"
-	worn_state = "environmentalist_party_pin"
-	name = "Evironmentalist Party Pin"
+/obj/item/clothing/accessory/medal/pin/environmentlist
+	icon_state = "environmentlist_party_pin"
+	worn_state = "environmentlist_party_pin"
+	name = "Evironmentlist Party Pin"
 	desc = "A political pin signifying that the wearer supports the beliefs of Evironmentalism."
 
 /obj/item/clothing/accessory/medal/pin/christian
@@ -650,10 +650,10 @@
 	name = "Conservative Party Pin"
 	desc = "A political pin signifying that the wearer supports the beliefs of Conservatism."
 
-/obj/item/clothing/accessory/medal/pin/nationalist
-	icon_state = "nationalist_party_pin"
-	worn_state = "nationalist_party_pin"
-	name = "Nationalist Party Pin"
+/obj/item/clothing/accessory/medal/pin/nationlist
+	icon_state = "nationlist_party_pin"
+	worn_state = "nationlist_party_pin"
+	name = "Nationlist Party Pin"
 	desc = "A political pin signifying that the wearer supports the beliefs of Nationalism."
 
 /obj/item/clothing/accessory/medal/pin/egatarian
@@ -668,10 +668,10 @@
 	name = "Egalitarian Party Pin"
 	desc = "A political pin signifying that the wearer supports the beliefs of Egalitarianism."
 
-/obj/item/clothing/accessory/medal/pin/globalist
-	icon_state = "globalist_flag_pin"
-	worn_state = "globalist_flag_pin"
-	name = "Globalist Party Pin"
+/obj/item/clothing/accessory/medal/pin/globlist
+	icon_state = "globlist_flag_pin"
+	worn_state = "globlist_flag_pin"
+	name = "Globlist Party Pin"
 	desc = "A political pin signifying that the wearer supports the beliefs of Globalism."
 
 /obj/item/clothing/accessory/medal/pin/worker/farmer

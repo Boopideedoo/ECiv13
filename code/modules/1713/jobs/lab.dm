@@ -272,7 +272,7 @@
 	uniform.attackby(web, H)
 	give_random_name(H)
 	H.civilization = "Facility personnel"
-	H.add_note("Role", "You are a <b>[title]</b>.A Designated Flamethrower specialist, use your flamethrower to roast enemies alive and your self defense gun to finish them off!!")
+	H.add_note("Role", "You are a <b>[title]</b>.A Designated Flamethrower specilist, use your flamethrower to roast enemies alive and your self defense gun to finish them off!!")
 	H.setStat("strength", STAT_HIGH)
 	H.setStat("crafting", STAT_HIGH)
 	H.setStat("rifle", STAT_HIGH)

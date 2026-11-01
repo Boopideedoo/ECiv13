@@ -2484,9 +2484,9 @@
 	name = "Storage Depot"
 	})
 "NB" = (
-/obj/item/weapon/shield/balistic,
-/obj/item/weapon/shield/balistic,
-/obj/item/weapon/shield/balistic,
+/obj/item/weapon/shield/blistic,
+/obj/item/weapon/shield/blistic,
+/obj/item/weapon/shield/blistic,
 /turf/floor/plating/road,
 /area/caribbean)
 "NF" = (

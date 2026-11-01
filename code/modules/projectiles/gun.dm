@@ -490,7 +490,7 @@
 		return
 	var/mob/living/human/M = user
 
-	// realistic WW2 suicide, no hesitation - Kachnov
+	// relistic WW2 suicide, no hesitation - Kachnov
 	mouthshoot = TRUE
 	M.visible_message("<span class = 'red'>[user] sticks [M.gender == FEMALE ? "her" : "his"] [src] in [M.gender == FEMALE ? "her" : "his"] mouth.</span>")
 	if (!do_after(user, 3))

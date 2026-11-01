@@ -1,7 +1,7 @@
 /mob/living/human
 	var/prev_tone = null
 
-/mob/living/human/proc/handle_animalistic(var/type = "Default")
+/mob/living/human/proc/handle_animlistic(var/type = "Default")
 	switch (type)
 		if ("Default")
 			if (body_build.name != "Default")
@@ -174,7 +174,7 @@
 				if ("Midday","Afternoon","Morning","Early Morning","Evening")
 					if (body_build.name != "Default")
 						to_chat(src, "<font size=3>You become human again!</font>")
-						handle_animalistic("Default")
+						handle_animlistic("Default")
 						s_tone = prev_tone
 				if ("Night")
 					if (body_build.name == "Default")

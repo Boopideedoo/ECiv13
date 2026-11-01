@@ -917,9 +917,9 @@
 
 	return TRUE
 
-/datum/job/dutch/emplaced_weapon_specialist
-	title = "Emplaced Wapen Specialist"
-	en_meaning = "Emplaced Weapons Specialist"
+/datum/job/dutch/emplaced_weapon_specilist
+	title = "Emplaced Wapen Specilist"
+	en_meaning = "Emplaced Weapons Specilist"
 	rank_abbreviation = "Kpl"
 	spawn_location = "JoinLateRN"
 
@@ -928,7 +928,7 @@
 	min_positions = 1
 	max_positions = 6
 
-/datum/job/dutch/emplaced_weapon_specialist/equip(var/mob/living/human/H)
+/datum/job/dutch/emplaced_weapon_specilist/equip(var/mob/living/human/H)
 	if (!H)	return FALSE
 //shoes
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/jackboots/modern(H), slot_shoes)
@@ -963,9 +963,9 @@
 
 	return TRUE
 
-/datum/job/dutch/weapon_specialist
-	title = "Wapen Specialist"
-	en_meaning = "Weapons Specialist"
+/datum/job/dutch/weapon_specilist
+	title = "Wapen Specilist"
+	en_meaning = "Weapons Specilist"
 	rank_abbreviation = "Kpl."
 	spawn_location = "JoinLateRN"
 
@@ -974,7 +974,7 @@
 	min_positions = 1
 	max_positions = 10
 
-/datum/job/dutch/weapon_specialist/equip(var/mob/living/human/H)
+/datum/job/dutch/weapon_specilist/equip(var/mob/living/human/H)
 	if (!H)	return FALSE
 //shoes
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/jackboots/modern(H), slot_shoes)
@@ -994,7 +994,7 @@
 	var/obj/item/weapon/gun/projectile/submachinegun/c7/HGUN = new/obj/item/weapon/gun/projectile/submachinegun/c7(H)
 	H.equip_to_slot_or_del(HGUN, slot_shoulder)
 
-	H.equip_to_slot_or_del(new /obj/item/gunbox/specialist(H), slot_l_hand)
+	H.equip_to_slot_or_del(new /obj/item/gunbox/specilist(H), slot_l_hand)
 	H.equip_to_slot_or_del(new /obj/item/weapon/storage/belt/smallpouches/olive/m16_smoke(H), slot_belt)
 
 	if (time_of_day == "Night" || time_of_day == "Evening" || time_of_day == "Early Morning")

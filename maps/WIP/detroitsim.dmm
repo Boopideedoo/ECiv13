@@ -221,7 +221,7 @@
 "em" = (/obj/structure/lamp/lamp_big/alwayson{dir = 4},/turf/floor/plating/concrete,/area/caribbean/roofed)
 "en" = (/obj/structure/lamp/lamp_big/alwayson{dir = 4},/turf/floor/wood,/area/caribbean/roofed)
 "eo" = (/obj/structure/shelf,/obj/item/weapon/storage/backpack/duffel,/obj/item/weapon/storage/backpack/duffel,/obj/item/weapon/storage/backpack/duffel,/obj/item/weapon/storage/backpack/duffel,/obj/item/weapon/storage/backpack/duffel,/obj/item/weapon/storage/backpack/duffel,/obj/item/weapon/storage/backpack/duffel,/turf/floor/plating/steel,/area/caribbean/roofed)
-"ep" = (/obj/structure/shelf,/obj/item/weapon/shield/balistic,/obj/item/weapon/shield/balistic,/obj/item/weapon/shield/balistic,/turf/floor/plating/steel,/area/caribbean/roofed)
+"ep" = (/obj/structure/shelf,/obj/item/weapon/shield/blistic,/obj/item/weapon/shield/blistic,/obj/item/weapon/shield/blistic,/turf/floor/plating/steel,/area/caribbean/roofed)
 "eq" = (/obj/structure/shelf,/obj/item/weapon/storage/toolbox,/turf/floor/plating/steel,/area/caribbean/roofed)
 "er" = (/obj/structure/barbwire{icon_state = "barbwire"; dir = 8},/obj/structure/simple_door/key_door/anyone/doubledoor/steel,/obj/structure/barricade/vertical,/turf/floor/plating/cobblestone/vertical/dark,/area/caribbean/roofed)
 "es" = (/obj/structure/bed/chair,/turf/floor/plating/steel,/area/caribbean/roofed)

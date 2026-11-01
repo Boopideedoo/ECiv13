@@ -171,12 +171,22 @@ var/global/list/round_voters = list() //Keeps track of the individuals voting fo
 					processes.mapswap.ready = TRUE
 					processes.mapswap.fire()
 				if ("map")
+					// Translate winning name back to ID and save via map loader subsystem
+					var/winning_id = ""
+					for (var/id in SSmap_loader.available_maps)
+						var/datum/map_info/M = SSmap_loader.available_maps[id]
+						if (M.name == .)
+							winning_id = id
+							break
+
+					if (winning_id)
+						SSmap_loader.set_next_map_from_vote(winning_id)
+
 					ticker.finished = TRUE
-					processes.mapswap.finished_at = world.time
 					var/F = file("SQL/gamedata.txt")
 					if (fexists("SQL/gamedata.txt"))
 						fdel(F)
-					var/string1 = "map:[processes.mapswap.next_map_title]\n"
+					var/string1 = "map:[winning_id]\n"
 					var/string2 = "players:[clients.len]\n"
 					text2file("[string1][string2]","SQL/gamedata.txt")
 				if ("gamemode")
@@ -232,15 +242,13 @@ var/global/list/round_voters = list() //Keeps track of the individuals voting fo
 						if (clients.len < processes.epochswap.epochs[epoch])
 							disabled[epoch] = "[processes.epochswap.epochs[epoch]] players needed"
 				if ("map")
-					for (var/map in processes.mapswap.maps)
-						if (!default)
-							default = map
-						map = capitalize(lowertext(map))
-						choices.Add(map)
-						choices[map] = 0
-					for (var/map in processes.mapswap.maps)
-						if (clients.len < processes.mapswap.maps[map])
-							disabled[capitalize(lowertext(map))] = "[processes.mapswap.maps[map]] players needed"
+					for (var/id in SSmap_loader.available_maps)
+						var/datum/map_info/M = SSmap_loader.available_maps[id]
+						if (M.voteable)
+							if (!default)
+								default = M.name
+							choices.Add(M.name)
+							choices[M.name] = 0
 				if ("custom")
 					question = input(usr,"What is the vote for?") as text|null
 					if (!question)	return FALSE
@@ -406,6 +414,8 @@ var/global/list/round_voters = list() //Keeps track of the individuals voting fo
 				. += "\t(<a href='?src=\ref[src];vote=toggle_restart'>[config.allow_vote_restart?"Allowed":"Disallowed"]</a>)"
 				. += "</li><li>"
 				. += "<a href='?src=\ref[src];vote=gamemode'>Gamemode</a></li>"
+			//map vote
+			. += "<li><a href='?src=\ref[src];vote=map'>Map</a></li>"
 			//custom
 			if (admin)
 				. += "<li><a href='?src=\ref[src];vote=custom'>Custom</a></li>"
@@ -447,6 +457,8 @@ var/global/list/round_voters = list() //Keeps track of the individuals voting fo
 			if ("gamemode")
 				if (usr.client.holder)
 					initiate_vote("gamemode",usr.key)
+			if ("map")
+				initiate_vote("map", usr.key)
 			else
 				var/t = round(text2num(href_list["vote"]))
 				if (t) // It starts from TRUE, so there's no problem

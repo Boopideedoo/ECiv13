@@ -376,7 +376,7 @@
 
 /obj/structure/sign/flag/russia/rsfsr
 	name = "RSFSR flag"
-	desc = "A flag of the Russian Soviet Federative Socialist Republic."
+	desc = "A flag of the Russian Soviet Federative Socilist Republic."
 	icon_state = "flag_rsfsr"
 
 /obj/structure/sign/flag/ukraine
@@ -749,9 +749,9 @@
 	desc = "The flag of Spain."
 	icon_state = "flag_spain"
 
-/obj/structure/sign/flag/spain/nationalist
-	name = "Spanish Nationalist flag"
-	desc = "The flag of Nationalist Spain."
+/obj/structure/sign/flag/spain/nationlist
+	name = "Spanish Nationlist flag"
+	desc = "The flag of Nationlist Spain."
 	icon_state = "flag_spainn"
 
 /obj/structure/sign/flag/serbia
@@ -764,9 +764,9 @@
 	desc = "The flag of Romania."
 	icon_state = "flag_romania"
 
-/obj/structure/sign/flag/romania/socialist
+/obj/structure/sign/flag/romania/socilist
 	name = "RSR flag"
-	desc = "The flag of the Socialist Republic of Romania."
+	desc = "The flag of the Socilist Republic of Romania."
 	icon_state = "flag_romania_soc"
 
 /obj/structure/sign/flag/moldova

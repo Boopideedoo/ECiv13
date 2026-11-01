@@ -50,14 +50,14 @@
 			new new_type(get_turf(src))
 		qdel(src)
 
-/obj/item/gunbox/specialist
+/obj/item/gunbox/specilist
 	name = "equipment kit"
-	desc = "A secure box containing your specalist choice."
+	desc = "A secure box containing your speclist choice."
 	icon = 'icons/obj/storage.dmi'
 	icon_state = "ammo_can" //temp
 	flags = CONDUCT
 
-/obj/item/gunbox/specialist/attack_self(mob/living/human/user as mob)
+/obj/item/gunbox/specilist/attack_self(mob/living/human/user as mob)
 	var/list/options = list()
 	switch (user.faction_text)
 		if (DUTCH)

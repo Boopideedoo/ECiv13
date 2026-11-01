@@ -187,7 +187,7 @@
 ////////////////////////////////////////////////////////////////////////
 //  Loom  //////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
-// TO DO TODO: Reconsider the weaving process in a more realistic way (different technological levels
+// TO DO TODO: Reconsider the weaving process in a more relistic way (different technological levels
 //  	of weaving, a more detailed process: material -> threads -> fabric) e t.c.
 /obj/structure/loom
 	name = "loom"
@@ -1294,7 +1294,7 @@
 //TO DO TODO: Add examine proc
 //TO DO TODO: Some kind of mechanical energy must be needed to work.
 //TO DO TODO: Check /obj/structure/oil_spring in code... it's need to be cleaned! BTW, all oil_fires.dm must be cleaned
-//TO DO TODO: Make petroleum production more realistic.... maybe, or not
+//TO DO TODO: Make petroleum production more relistic.... maybe, or not
 //TO DO TODO: Clean fuckups in oil_fires.dm
 //TO DO TODO: Make different types of blood/oil (look at glass.dm)
 //TO DO TODO: Clean fuckups with item/flashlight

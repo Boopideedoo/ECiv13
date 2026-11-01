@@ -1044,7 +1044,7 @@ var/list/coefflist = list()
 	src << "<span class='notice'>You are now [pulling_punches ? "pulling your punches" : "not pulling your punches"].</span>"
 	return
 
-//generates realistic-ish pulse output based on preset levels
+//generates relistic-ish pulse output based on preset levels
 /mob/living/human/proc/get_pulse(var/method)	//method FALSE is for hands, TRUE is for machines, more accurate
 	var/temp = FALSE
 	switch(pulse())

@@ -584,7 +584,7 @@
 
 /obj/item/clothing/head/helmet/asterix
 	name = "winged helmet"
-	desc = "A winged helmet, used swift warriors who don't mind brutalistic stabs to the face."
+	desc = "A winged helmet, used swift warriors who don't mind brutlistic stabs to the face."
 	icon_state = "asterix"
 	item_state = "asterix"
 	worn_state = "asterix"

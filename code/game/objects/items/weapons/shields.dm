@@ -387,7 +387,7 @@ obj/item/weapon/shield/attack_self(mob/user as mob)
 	base_block_chance = 65
 	slowdown = 0.35
 
-/obj/item/weapon/shield/balistic
+/obj/item/weapon/shield/blistic
 	name = "ballistic shield"
 	desc = "A shield designed to be excellent in blocking projectiles."
 	icon_state = "metal_riot"

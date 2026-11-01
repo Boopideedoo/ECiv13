@@ -2066,9 +2066,9 @@
 
 	return TRUE
 
-/datum/job/german/ss_abbruchspezialist
-	title = "Waffen-SS Abbruchspezialist"
-	en_meaning = "Demolitions Specialist"
+/datum/job/german/ss_abbruchspezilist
+	title = "Waffen-SS Abbruchspezilist"
+	en_meaning = "Demolitions Specilist"
 	rank_abbreviation = ""
 
 	spawn_location = "JoinLateGE"
@@ -2080,7 +2080,7 @@
 	min_positions = 1
 	max_positions = 5
 
-/datum/job/german/ss_abbruchspezialist/equip(var/mob/living/human/H)
+/datum/job/german/ss_abbruchspezilist/equip(var/mob/living/human/H)
 	if (!H)	return FALSE
 //shoes
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/jackboots(H), slot_shoes)

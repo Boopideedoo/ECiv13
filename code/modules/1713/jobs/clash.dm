@@ -206,7 +206,7 @@
 /datum/job/norwegian/bear_clan/healer
 	title = "Laekir"
 	en_meaning = "Healer"
-	rank_abbreviation = "Herbalist"
+	rank_abbreviation = "Herblist"
 
 	spawn_location = "JoinLateRO"
 
