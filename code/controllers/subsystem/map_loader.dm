@@ -1,3 +1,6 @@
+
+GLOBAL_DATUM(SSmap_loader, /datum/controller/subsystem/map_loader)
+
 /datum/map_info
     var/name = ""
     var/id = ""
