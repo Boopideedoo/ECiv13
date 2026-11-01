@@ -67,6 +67,7 @@
 #include "code\__defines\dcs\helpers.dm"
 #include "code\__defines\dcs\signals.dm"
 #include "code\_globalvars\configuration.dm"
+#include "code\_globalvars\globalvars.dm"
 #include "code\_helpers\_logging.dm"
 #include "code\_helpers\areas.dm"
 #include "code\_helpers\cmp.dm"
@@ -115,9 +116,11 @@
 #include "code\controllers\mc\globals.dm"
 #include "code\controllers\mc\master.dm"
 #include "code\controllers\mc\subsystem.dm"
+#include "code\controllers\subsystem\_map_loader.dm"
+/*
 #include "code\controllers\subsystem\database.dm"
+*/
 #include "code\controllers\subsystem\dcs.dm"
-#include "code\controllers\subsystem\map_loader.dm"
 #include "code\controllers\subsystem\timer.dm"
 #include "code\datums\browser.dm"
 #include "code\datums\callback.dm"

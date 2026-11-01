@@ -24,6 +24,7 @@ var/global/list/round_voters = list() //Keeps track of the individuals voting fo
 	var/autogamemode_triggered = FALSE
 	var/faction = 0
 	var/ship_size = "Small Ships"
+
 	New()
 		if (vote != src)
 			if (istype(vote))
@@ -32,15 +33,11 @@ var/global/list/round_voters = list() //Keeps track of the individuals voting fo
 
 	proc/process()	//called by master_controller
 		if (mode)
-			// No more change mode votes after the game has started.
-			// 3 is GAME_STATE_PLAYING, but that #define is undefined for some reason
 			if ((mode == "gamemode" || mode == "ship selection") && ticker.current_state >= 2)
 				to_chat(world, "<b>Voting aborted due to game start.</b>")
 				reset()
 				return
 
-			// Calculate how much time is remaining by comparing current time, to time of vote start,
-			// plus vote duration
 			if (mode == "ship selection")
 				if (faction == 0)
 					time_remaining = round((started_time + 450 - world.time)/10)
@@ -85,7 +82,6 @@ var/global/list/round_voters = list() //Keeps track of the individuals voting fo
 		else
 			return
 
-
 	proc/reset()
 		initiator = null
 		time_remaining = 0
@@ -100,7 +96,6 @@ var/global/list/round_voters = list() //Keeps track of the individuals voting fo
 		disabled.Cut()
 
 	proc/get_result()
-		//get the highest number of votes
 		var/greatest_votes = 0
 		var/total_votes = 0
 		for (var/option in choices)
@@ -111,8 +106,6 @@ var/global/list/round_voters = list() //Keeps track of the individuals voting fo
 
 		var/vote_threshold = total_votes * win_threshold
 
-
-		//get all options with that many votes and return them in a list
 		. = list()
 		if (greatest_votes && greatest_votes >= vote_threshold)
 			for (var/option in choices)
@@ -128,7 +121,6 @@ var/global/list/round_voters = list() //Keeps track of the individuals voting fo
 				winners += default
 		if (winners.len)
 			if (winners.len > 1)
-			//	if (mode != "gamemode") // Here we are making sure we don't announce potential game modes
 				text = "<b>Vote Tied Between:</b>\n"
 				for (var/option in winners)
 					text += "\t[option]\n"
@@ -137,7 +129,7 @@ var/global/list/round_voters = list() //Keeps track of the individuals voting fo
 
 			for (var/key in current_votes)
 				if (choices[current_votes[key]] == newwinner)
-					round_voters += key // Keep track of who voted for the winning round.
+					round_voters += key
 			text += "<b>Vote Result: <span class = 'ping'>[newwinner]</span></b><br>"
 			text += "<b>The vote has ended. </b>"
 			if (callback)
@@ -161,17 +153,7 @@ var/global/list/round_voters = list() //Keeps track of the individuals voting fo
 						map.next_win = world.time - 100
 						map.round_finished = TRUE
 						ticker.finished = TRUE
-						processes.epochswap.restart_triggered = TRUE
-						processes.epochswap.ready = TRUE
-						log_admin("Restart Vote triggered an epoch vote.")
-						message_admins("Restart Vote triggered an epoch vote.")
-				if ("epoch")
-					ticker.finished = TRUE
-					processes.mapswap.restart_triggered = TRUE
-					processes.mapswap.ready = TRUE
-					processes.mapswap.fire()
 				if ("map")
-					// Translate winning name back to ID and save via map loader subsystem
 					var/winning_id = ""
 					for (var/id in SSmap_loader.available_maps)
 						var/datum/map_info/M = SSmap_loader.available_maps[id]
@@ -183,14 +165,10 @@ var/global/list/round_voters = list() //Keeps track of the individuals voting fo
 						SSmap_loader.set_next_map_from_vote(winning_id)
 
 					ticker.finished = TRUE
-					var/F = file("SQL/gamedata.txt")
-					if (fexists("SQL/gamedata.txt"))
-						fdel(F)
-					var/string1 = "map:[winning_id]\n"
-					var/string2 = "players:[clients.len]\n"
-					text2file("[string1][string2]","SQL/gamedata.txt")
 				if ("gamemode")
-					processes.gamemode.swap(.)
+					voted_gamemode = .
+					to_chat(world, "<b>Gamemode set to [voted_gamemode] by vote.</b>")
+					log_game("Gamemode set to [voted_gamemode] by vote.")
 				if ("ship selection")
 					var/obj/map_metadata/battle_ships/battle_ships = map
 					if (faction == 3)
@@ -212,7 +190,7 @@ var/global/list/round_voters = list() //Keeps track of the individuals voting fo
 				if (current_votes[ckey])
 					choices[choices[current_votes[ckey]]]--
 				voted += usr.ckey
-				choices[choices[vote]]++	//check this
+				choices[choices[vote]]++
 				current_votes[ckey] = vote
 				return vote
 		return FALSE
@@ -232,15 +210,6 @@ var/global/list/round_voters = list() //Keeps track of the individuals voting fo
 				if ("restart")
 					choices.Add("Restart Round","Continue Playing")
 					win_threshold = 0.59
-				if ("epoch")
-					for (var/epoch in processes.epochswap.epochs)
-						if (!default)
-							default = epoch
-						choices.Add(epoch)
-						choices[epoch] = 0
-					for (var/epoch in processes.epochswap.epochs)
-						if (clients.len < processes.epochswap.epochs[epoch])
-							disabled[epoch] = "[processes.epochswap.epochs[epoch]] players needed"
 				if ("map")
 					for (var/id in SSmap_loader.available_maps)
 						var/datum/map_info/M = SSmap_loader.available_maps[id]
@@ -262,11 +231,11 @@ var/global/list/round_voters = list() //Keeps track of the individuals voting fo
 				if ("gamemode")
 					var/list/options = list()
 					if (map.ID == MAP_CAPITOL_HILL || map.ID == MAP_YELTSIN)
-						options = list("Protect the VIP", "Siege",/* "Area Capture",*/ "Kills")
+						options = list("Protect the VIP", "Siege", "Kills")
 						if (!default)
 							default = "Siege"
 					else if (map.ID == MAP_WACO)
-						options = list("Protect the VIP", "Siege",/* "Area Capture",*/ /*"Kills"*/)
+						options = list("Protect the VIP", "Siege")
 						if (!default)
 							default = "Siege"
 					else if (map.ID == MAP_EFT_FACTORY)
@@ -301,31 +270,18 @@ var/global/list/round_voters = list() //Keeps track of the individuals voting fo
 				if ("ship selection")
 					var/list/options = list()
 					
-					var/list/small_ships = list(
-						"Patrol boat" = 0,
-					)
-					var/list/destroyers = list(
-						"Indomitable" = 0,
-						"Azula" = 0
-					)
-					var/list/battle_ships = list(
-						"Kurama" = 0,
-					)
+					var/list/small_ships = list("Patrol boat" = 0)
+					var/list/destroyers = list("Indomitable" = 0, "Azula" = 0)
+					var/list/battle_ships = list("Kurama" = 0)
+					
 					if (faction == 0)
 						question = "What kind of ships should face eachother?"
-						options = list(
-						"Small Ships" = 0,
-						"Destroyers" = 10,
-						"Battle Ships (OUT OF ROTATION)" = 999,
-						)
+						options = list("Small Ships" = 0, "Destroyers" = 10, "Battle Ships (OUT OF ROTATION)" = 999)
 						default = "Small Ships"
-
 					else
 						switch (faction)
-							if (1)
-								question = "What ship should the Redmenians use?"
-							if (2)
-								question = "What ship should the Blugoslavians use?"
+							if (1) question = "What ship should the Redmenians use?"
+							if (2) question = "What ship should the Blugoslavians use?"
 						switch (ship_size)
 							if ("Small Ships")
 								options = small_ships
@@ -404,7 +360,6 @@ var/global/list/round_voters = list() //Keeps track of the individuals voting fo
 				. += "(<a href='?src=\ref[src];vote=cancel'>Cancel Vote</a>) "
 		else
 			. += "<h2>Start a vote:</h2><hr><ul><li>"
-			//restart
 			if (admin || config.allow_vote_restart)
 				. += "<a href='?src=\ref[src];vote=restart'>Restart</a>"
 			else
@@ -414,9 +369,7 @@ var/global/list/round_voters = list() //Keeps track of the individuals voting fo
 				. += "\t(<a href='?src=\ref[src];vote=toggle_restart'>[config.allow_vote_restart?"Allowed":"Disallowed"]</a>)"
 				. += "</li><li>"
 				. += "<a href='?src=\ref[src];vote=gamemode'>Gamemode</a></li>"
-			//map vote
 			. += "<li><a href='?src=\ref[src];vote=map'>Map</a></li>"
-			//custom
 			if (admin)
 				. += "<li><a href='?src=\ref[src];vote=custom'>Custom</a></li>"
 			. += "</ul><hr>"
@@ -424,9 +377,8 @@ var/global/list/round_voters = list() //Keeps track of the individuals voting fo
 
 		return .
 
-
 	Topic(href,href_list[],hsrc)
-		if (!usr || !usr.client)	return	//not necessary but meh...just in-case somebody does something stupid
+		if (!usr || !usr.client)	return
 		switch(href_list["vote"])
 			if ("close")
 				voting -= usr.client
@@ -461,10 +413,9 @@ var/global/list/round_voters = list() //Keeps track of the individuals voting fo
 				initiate_vote("map", usr.key)
 			else
 				var/t = round(text2num(href_list["vote"]))
-				if (t) // It starts from TRUE, so there's no problem
+				if (t)
 					submit_vote(usr.ckey, t)
 		usr.vote()
-
 
 /mob/verb/vote()
 	set category = "OOC"

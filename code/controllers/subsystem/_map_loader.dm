@@ -1,5 +1,4 @@
 
-GLOBAL_DATUM(SSmap_loader, /datum/controller/subsystem/map_loader)
 
 /datum/map_info
     var/name = ""
@@ -52,8 +51,9 @@ GLOBAL_DATUM(SSmap_loader, /datum/controller/subsystem/map_loader)
     current_map = next_map
     log_world("ECIV13 MAP LOADING: [current_map.name] ([current_map.path])")
 
-    if (fexists(current_map.path))
-        world.load_mode(current_map.path)
+    if (current_map && current_map.path)
+        fdel(file("data/next_map.txt"))
+        text2file(current_map.path, file("data/next_map.txt"))
         return TRUE
     return FALSE
 
@@ -62,7 +62,3 @@ GLOBAL_DATUM(SSmap_loader, /datum/controller/subsystem/map_loader)
     var/datum/map_info/chosen = available_maps[map_id]
     next_map = chosen
 
-    if (fexists("data/next_map.txt")) fdel("data/next_map.txt")
-    map_id >> "data/next_map.txt"
-    world << "<span class='boldannounce'>Next round map set to: <b>[chosen.name]</b></span>"
-    return TRUE

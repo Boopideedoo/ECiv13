@@ -333,7 +333,7 @@ proc/admin_notice(var/message, var/rights)
 	var/confirm = WWinput(usr, "Restart the game world?", "Restart", "Yes", list("Yes", "Cancel"))
 	if (confirm == "Cancel")
 		return
-	if (processes.mapswap && ticker.restarting_is_very_bad)
+	if (SSmap_loader && ticker.restarting_is_very_bad)
 		var/unconfirm = WWinput(usr, "Mapswap is in progress. Restarting now may break the linked server. Continue?", "Warning", "No", list("No", "Yes"))
 		if (unconfirm == "No")
 			return
