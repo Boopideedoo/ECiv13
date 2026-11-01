@@ -1,5 +1,3 @@
-var/datum/vote/vote = new()
-
 var/global/list/round_voters = list() //Keeps track of the individuals voting for a given round, for use in forcedrafting.
 
 /datum/vote

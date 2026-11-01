@@ -10,6 +10,7 @@
 
 // --- Subsystem & Controller Globals ---
 var/datum/controller/subsystem/map_loader/SSmap_loader
+var/global/datum/vote/vote = new()
 
 // --- Future Expansion Examples (Uncomment and modify as needed) ---
 // var/datum/controller/subsystem/economy/SSeconomy
