@@ -1,3 +1,14 @@
+// Type stubs for compiler visibility
+/datum/controller/subsystem/map_loader
+	var/list/available_maps = list()
+	var/datum/map_info/next_map = null
+	proc/set_next_map_from_vote(var/winning_id)
+
+/datum/map_info
+	var/name = "Unknown Map"
+	var/voteable = TRUE
+	var/ID = ""
+
 var/global/list/round_voters = list() //Keeps track of the individuals voting for a given round, for use in forcedrafting.
 
 /datum/vote
