@@ -1,16 +1,3 @@
-// Type stubs for compiler visibility
-/datum/controller/subsystem/map_loader
-	var/list/available_maps
-	var/datum/map_info/next_map
-
-/datum/controller/subsystem/map_loader/proc/set_next_map_from_vote(var/winning_id)
-	return
-
-/datum/map_info
-	var/name
-	var/voteable
-	var/ID
-
 var/global/list/round_voters = list() //Keeps track of the individuals voting for a given round, for use in forcedrafting.
 
 /datum/vote
